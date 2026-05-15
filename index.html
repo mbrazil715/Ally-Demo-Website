@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ally Bank | Checking, Savings, Investing & Auto</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --ally-deep-purple: #2e004f;
@@ -31,12 +31,13 @@
             opacity: 0.7;
         }
 
-        /* Hero styling */
+        /* Hero styling matched to working iteration */
         .hero-container {
             display: flex;
             min-height: 540px;
             background-color: var(--ally-deep-purple);
             overflow: hidden;
+            width: 100%;
         }
 
         .hero-content {
@@ -71,19 +72,21 @@
             }
             .hero-content {
                 padding: 60px 24px;
+                text-align: left;
             }
             .hero-image-side {
                 height: 400px;
+                width: 100%;
             }
         }
 
         .btn-ally {
             background-color: #9333ea;
             color: white;
-            padding: 0.75rem 2rem;
+            padding: 0.75rem 2.5rem;
             border-radius: 9999px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 700;
+            font-size: 1rem;
             transition: background-color 0.2s;
             display: inline-block;
         }
@@ -142,7 +145,7 @@
     <section class="hero-container">
         <!-- Text Side -->
         <div class="hero-content">
-            <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] mb-6">
+            <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.05] mb-6">
                 Spend on Tacos.<br>Save for Tulum.
             </h1>
             <p class="text-xl opacity-90 mb-10 max-w-sm">
@@ -153,7 +156,7 @@
             </div>
         </div>
 
-        <!-- Image Side (Stock Photo replacement) -->
+        <!-- Image Side (Fixed using working iteration logic) -->
         <div class="hero-image-side">
             <img src="https://images.unsplash.com/photo-1599974599747-066b220f4c12?auto=format&fit=crop&w=1200&q=80" 
                  alt="Person enjoying tacos at a table"
@@ -163,12 +166,11 @@
 
     <!-- Product Cards -->
     <section class="max-w-[1200px] mx-auto px-6 py-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm flex flex-col items-center text-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[900px] mx-auto">
+            <div class="bg-white border border-gray-100 rounded-2xl p-10 shadow-sm flex flex-col items-center text-center">
                 <span class="text-[11px] font-bold tracking-[0.15em] uppercase text-gray-400 mb-4">Spending Account</span>
                 <h3 class="text-xl font-bold mb-3">Checking made smarter.</h3>
-                <p class="text-gray-500 mb-10 text-[14px] leading-relaxed max-w-[240px]">
+                <p class="text-gray-500 mb-10 text-[14px] leading-relaxed max-w-[280px]">
                     Get paid up to two days sooner and avoid hidden fees with an Ally Bank Spending Account.
                 </p>
                 <div class="mt-auto">
@@ -176,40 +178,124 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm flex flex-col items-center text-center">
+            <div class="bg-white border border-gray-100 rounded-2xl p-10 shadow-sm flex flex-col items-center text-center">
                 <span class="text-[11px] font-bold tracking-[0.15em] uppercase text-gray-400 mb-4">Ally Invest</span>
                 <h3 class="text-xl font-bold mb-3">Match your money goals with solutions as unique as you.</h3>
                 <div class="mt-auto pt-10">
                     <a href="#" class="card-btn">View Your Choices</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Card 3 -->
-            <div class="bg-white border border-gray-100 rounded-xl p-8 shadow-sm flex flex-col items-center text-center">
-                <span class="text-[11px] font-bold tracking-[0.15em] uppercase text-gray-400 mb-4">Bank With Us</span>
-                <h3 class="text-xl font-bold mb-3">A different kind of bank.</h3>
-                <p class="text-gray-500 mb-10 text-[14px] leading-relaxed max-w-[240px]">
-                    We changed the game by being one of the first banks to eliminate overdraft fees. See how else we're making banking better for you.
-                </p>
-                <div class="mt-auto">
-                    <a href="#" class="card-btn">Learn More</a>
+    <!-- Ally in Every Corner -->
+    <section class="max-w-[1400px] mx-auto px-6 py-12">
+        <div class="bg-[#2e004f] rounded-[2.5rem] p-12 lg:p-16 text-white text-center">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-12">You’ve got an ally in every corner.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
+                <!-- Column 1 -->
+                <div class="space-y-6">
+                    <div class="border-b border-gray-500 pb-2 mb-4">
+                        <span class="font-bold opacity-80">Ally Bank</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-y-4 text-left font-medium">
+                        <a href="#" class="hover:underline">Spending</a>
+                        <a href="#" class="hover:underline">High Yield CD</a>
+                        <a href="#" class="hover:underline">Savings</a>
+                        <a href="#" class="hover:underline">Raise Your Rate CD</a>
+                        <a href="#" class="hover:underline">Money Market</a>
+                        <a href="#" class="hover:underline">No Penalty CD</a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-6">
+                    <div class="border-b border-gray-500 pb-2 mb-4">
+                        <span class="font-bold opacity-80">Ally Invest</span>
+                    </div>
+                    <div class="space-y-4 text-left font-medium">
+                        <a href="#" class="block hover:underline">Self-Directed Trading</a>
+                        <a href="#" class="block hover:underline">Robo Portfolios</a>
+                        <a href="#" class="block hover:underline">Personal Advice</a>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-6">
+                    <div class="border-b border-gray-500 pb-2 mb-4">
+                        <span class="font-bold opacity-80">Ally + Ladder</span>
+                    </div>
+                    <div class="text-left font-medium">
+                        <a href="#" class="hover:underline">Life Insurance</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sub-Banner -->
-    <section class="bg-white py-12 text-center border-t border-gray-100">
-        <h2 class="text-gray-900 text-3xl font-bold">You’ve got an ally in every corner.</h2>
+    <!-- Stories Section -->
+    <section class="max-w-[1400px] mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-16 max-w-2xl mx-auto leading-tight">
+            Inspiring stories and helpful information to build your best possible future.
+        </h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-xl mb-4 h-48 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80" 
+                         alt="Save" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                </div>
+                <span class="text-[11px] font-bold uppercase text-purple-700 tracking-wider">Save</span>
+                <h4 class="font-bold text-[15px] mt-2 leading-snug group-hover:underline">
+                    4 ways Ally Bank's Spending and Savings Accounts optimize your finances
+                </h4>
+                <p class="text-[12px] text-gray-500 mt-2 font-medium">3 min read</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-xl mb-4 h-48 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80" 
+                         alt="Travel" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                </div>
+                <span class="text-[11px] font-bold uppercase text-purple-700 tracking-wider">Travel</span>
+                <h4 class="font-bold text-[15px] mt-2 leading-snug group-hover:underline">
+                    Hidden costs of cruises
+                </h4>
+                <p class="text-[12px] text-gray-500 mt-2 font-medium">4 min read</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-xl mb-4 h-48 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&w=600&q=80" 
+                         alt="Life" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                </div>
+                <span class="text-[11px] font-bold uppercase text-purple-700 tracking-wider">Save</span>
+                <h4 class="font-bold text-[15px] mt-2 leading-snug group-hover:underline">
+                    A step-by-step guide to save for life moments with Ally Bank’s buckets
+                </h4>
+                <p class="text-[12px] text-gray-500 mt-2 font-medium">4 min read</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-xl mb-4 h-48 bg-gray-100">
+                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=600&q=80" 
+                         alt="Checking" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
+                </div>
+                <span class="text-[11px] font-bold uppercase text-purple-700 tracking-wider">Save</span>
+                <h4 class="font-bold text-[15px] mt-2 leading-snug group-hover:underline">
+                    How to add cash to your checking account at Ally Bank
+                </h4>
+                <p class="text-[12px] text-gray-500 mt-2 font-medium">3 min read</p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-10 px-6">
-        <div class="max-w-[1400px] mx-auto text-[11px] text-gray-500">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+    <footer class="bg-white border-t border-gray-200 py-16 px-6">
+        <div class="max-w-[1400px] mx-auto text-[11px] text-gray-500 font-medium">
+            <div class="flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 Ally Financial Inc.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
+                <div class="flex space-x-6 mt-4 md:mt-0 uppercase tracking-widest">
                     <a href="#" class="hover:underline">Privacy</a>
                     <a href="#" class="hover:underline">Security</a>
                     <a href="#" class="hover:underline">Legal</a>
